@@ -192,9 +192,11 @@ The project for the unit, worth
 of the unit's marks is due on
 {{ siteinfo.assessments.project.dates.due | dateFormat("dddd D MMM") }}.
 
+It will include both programming work and written work, and is to be
+completed individually.
+
 {#
 
-It will include both programming work and written work, plus an oral component.
 Students will be required to book a short (less than 10 mins) meeting
 (either face-to-face or via MS Teams) with a marker,
 where they should expect to answer some basic questions about their project
