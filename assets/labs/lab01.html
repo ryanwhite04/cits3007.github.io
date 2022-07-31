@@ -224,6 +224,14 @@
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
+  <style>
+    div.solutions {
+      border: solid 2pt hsla(120, 100%, 35%, 1);
+      border-radius: 5pt;
+      background-color: hsla(120, 100%, 50%, 0.1);
+      padding: 1em;
+    }
+  </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -356,10 +364,10 @@ following:</p>
     default: Warning: Connection reset. Retrying...
     default: Warning: Remote connection disconnect. Retrying...
     default: Warning: Connection reset. Retrying...
-    default: 
+    default:
     default: Vagrant insecure key detected. Vagrant will automatically replace
     default: this with a newly generated keypair for better security.
-    default: 
+    default:
     default: Inserting generated public key within guest...
     default: Removing insecure key from the guest if it&#39;s present...
     default: Key inserted! Disconnecting and reconnecting using new SSH key...
@@ -547,25 +555,25 @@ is a way of quantifying the severity of a vulnerability using a number
 from 0 to 10, where 0 is the least severe and 10 the most. Read more
 about these severity ratings at <a href="https://nvd.nist.gov/vuln-metrics/cvss" class="uri">https://nvd.nist.gov/vuln-metrics/cvss</a>.</li>
 </ul>
-<p>Read the <code>ASB-2022.0129</code> bulletin and the NIST page on
+<p>Read the <code>ESB-2022.1671</code> bulletin and the NIST page on
 severity ratings, and answer the following questions:</p>
 <ol type="a">
-<li>The bulletin is for a patch which fixes a <em>vulnerability</em>.
+<li><p>The bulletin is for a patch which fixes a <em>vulnerability</em>.
 What is the vulnerability (give a CVE identifier and a description)? In
-what product does it occur?</li>
-<li>How severe is the vulnerability? If a vulnerability is severe, does
-that necessarily mean it is easy to exploit, and/or has a high
-probability of being exploited?</li>
+what product does it occur?</p></li>
+<li><p>How severe is the vulnerability? If a vulnerability is severe,
+does that necessarily mean it is easy to exploit, and/or has a high
+probability of being exploited?</p></li>
 </ol>
 <p>Locate the CVE information page on <a href="https://www.cve.org" class="uri">https://www.cve.org</a> for this vulnerability, and follow
 the links there to find out more about it. Google for the definitions of
 any terms you do not know – <a href="https://en.wikipedia.org/">Wikipedia</a> has good summaries of
 most terms. Answer the following questions:</p>
 <ol start="3" type="a">
-<li>How could an attacker exploit this vulnerability? Describe a
-scenario in which this could occur.</li>
-<li>Of the “C I A” security goals – which ones could be compromised if
-this vulnerability were exploited?</li>
+<li><p>How could an attacker exploit this vulnerability? Describe a
+scenario in which this could occur.</p></li>
+<li><p>Of the “C I A” security goals – which ones could be compromised
+if this vulnerability were exploited?</p></li>
 </ol>
 <h2 id="c-development">4. C development</h2>
 <p>Ideally, you should be doing this unit in your 3rd year, and have
@@ -709,7 +717,7 @@ as little as $5 per month (e.g. from <a href="https://www.carbonite.com" class=
 Library page “<a href="https://www.uwa.edu.au/library/Help-and-support/Student-email-and-collaboration-tools">Student
 email and collaboration tools</a>”, under the heading “Access the
 student collaboration tools”.</p>
-<!-- vim: syntax=markdown tw=72 :
+<!-- vim: syntax=markdown tw=72 smartindent :
 -->
 <section class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr />
