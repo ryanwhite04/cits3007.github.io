@@ -258,7 +258,7 @@ follow-up meeting (either face-to-face, or via MS Teams) with a marker,
 where they should expect to answer some basic questions about their exam responses.
 
 The exam will be available for 48 hours from its publication on LMS
-to its due date, and can be submitted ay any time within that range.
+to its due date, and can be submitted at any time within that range.
 It should take about 2 hours' work to complete.
 
 {#

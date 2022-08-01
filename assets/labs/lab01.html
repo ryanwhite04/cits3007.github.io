@@ -325,7 +325,7 @@ use.</p>
 virtual machine using <a href="https://www.ssh.com/academy/ssh"><code>ssh</code></a> and present
 you with a shell prompt:</p>
 <pre><code>$ vagrant ssh
-alpine316:~$ </code></pre>
+alpine316:~$</code></pre>
 <p>If this works, you can simply exit the shell by typing
 <code>exit</code> or hitting <code>ctrl-D</code>. If it doesn’t, please
 see one of the lab facilitators for assistance.</p>
@@ -377,12 +377,11 @@ following:</p>
 <p>Once it’s done, you can type <code>vagrant ssh</code> to get shell
 access to the new VM:</p>
 <pre><code>$ vagrant ssh
-vagrant@cits3007-ubuntu2004:~$ </code></pre></li>
+vagrant@cits3007-ubuntu2004:~$</code></pre></li>
 <li><p>Optional: install VS Code and the “Remote-SSH” extension.</p>
 <p>The standard CITS3007 development environment VM comes with the
 <code>vim</code> editor already installed, but many people find it more
-comfortable to developing and debugging code using a graphical
-editor.</p>
+comfortable developing and debugging code using a graphical editor.</p>
 <p><a href="https://code.visualstudio.com">Visual Studio Code</a> (VS
 Code) works well on Windows, Mac and Linux computers, and allows you to
 seamlessly write and debug code on a Vagrant VM.</p>
@@ -423,13 +422,14 @@ in VS Code, and save it. You may want to change the first line from
 <code>Host cits3007-test</code>.</p>
 <p>Pasting this configuration informs VS Code about the new VM and how
 to connect to it. If you again click on the “remote window” button in
-the lower left corner of VS Code, one of the option is “Connect to
+the lower left corner of VS Code, one of the options is “Connect to
 Host”, and if you select <em>that</em>, one of the options should be the
 new VM you specified (e.g. <code>cits3007-test</code>).</p>
 <p>VS Code will open a new window (and spend a few seconds setting up
 some software on the VM): in this window, you can use VS Code as normal,
 but all files you can access will be on the virtual machine.</p></li>
 </ol>
+<h4 id="vagrant-cheat-sheet">Vagrant cheat sheet</h4>
 <p>You can find a useful “cheat sheet” of commands for managing Vagrant
 VMs here: <a href="https://cheatography.com/davbfr/cheat-sheets/vagrant-cheat-sheet/" class="uri">https://cheatography.com/davbfr/cheat-sheets/vagrant-cheat-sheet/</a>.</p>
 <h3 id="using-gitpod">Using GitPod</h3>
@@ -645,8 +645,9 @@ $ ./test_leap 9223372036854775808
 $ ./test_leap foo
 $ ./test_leap foo bar</code></pre>
 <p>What results do you get? Take a look at the code in
-<code>test_leap.c</code> and explain what is happening in each
-case.</p></li>
+<code>test_leap.c</code>, read the documentation for the
+<code>strtol</code> function (by running <code>man strtol</code>), and
+explain what is happening in each case.</p></li>
 <li><p>Create a repository on GitHub that will hold your own version of
 this code. Visit <a href="https://github.com" class="uri">https://github.com</a>, click on the plus (“+”) symbol in
 the top right-hand corner of the page, select “new repository”, and give

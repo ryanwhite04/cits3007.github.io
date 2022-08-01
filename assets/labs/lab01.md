@@ -160,7 +160,7 @@ To install VirtualBox and Vagrant:
 
     The standard CITS3007 development environment VM comes with the
     `vim` editor already installed, but many people find it more
-    comfortable to developing and debugging code using a graphical
+    comfortable developing and debugging code using a graphical
     editor.
 
     [Visual Studio Code][vs-code] (VS Code) works well on Windows, Mac
@@ -221,7 +221,7 @@ To install VirtualBox and Vagrant:
 
     Pasting this configuration informs VS Code about the new VM and how
     to connect to it. If you again click on the "remote window" button
-    in the lower left corner of VS Code, one of the option is "Connect
+    in the lower left corner of VS Code, one of the options is "Connect
     to Host", and if you select *that*, one of the options should be the
     new VM you specified (e.g. `cits3007-test`).
 
@@ -230,6 +230,8 @@ To install VirtualBox and Vagrant:
     normal, but all files you can access will be on the virtual machine.
 
 [vs-code]: https://code.visualstudio.com
+
+#### Vagrant cheat sheet
 
 You can find a useful "cheat sheet" of commands for managing Vagrant VMs
 here:
@@ -366,14 +368,14 @@ a.  How would you describe the relationship between threats,
     vulnerabilities, and attacks? Give examples to illustrate the
     relationship.
 
-
+    
 
 
 
 #.  Is it possible for a *threat* and a *vulnerability* to both exist,
     without there being an attack? Explain why or why not.
 
-
+    
 
 #.  Consider an ATM, which requires users to provide a bank card and a
     PIN in order to perform transactions. Give examples of
@@ -382,7 +384,7 @@ a.  How would you describe the relationship between threats,
     requirement is -- are they all equally important, or does the
     importance differ?
 
-
+    
 
 ## 3. AusCERT security bulletins
 
@@ -425,14 +427,14 @@ a.  The bulletin is for a patch which fixes a *vulnerability*.
     What is the vulnerability (give a CVE identifier and a description)?
     In what product does it occur?
 
-
+    
 
 #.  How severe is the vulnerability? If a vulnerability is severe, does
     that necessarily mean it is easy to exploit, and/or has a high
     probability of being exploited?
 
 
-
+    
 
 
 Locate the CVE information page on <https://www.cve.org> for
@@ -444,13 +446,13 @@ Answer the following questions:
 c.  How could an attacker exploit this vulnerability? Describe
     a scenario in which this could occur.
 
-
+    
 
 
 #.  Of the "C I A" security goals -- which ones could be compromised
     if this vulnerability were exploited?
 
-
+    
 
 
 
@@ -479,7 +481,7 @@ following websites useful:
 a.  What is the difference between the C literal values `3`, `'3'`,
     `"3"` and `3.0`? What is the type of each?
 
-
+    
 
 
 
@@ -503,18 +505,18 @@ a.  What is the difference between the C literal values `3`, `'3'`,
     If this code is executed, what will be printed to the terminal?
 
 
-
+    
 
 #.  What is the output of the question (b) code if we change the string
     `"test"` to `"TEST"`?
 
 
-
+    
 
 #.  What is the output of the question (b) code if we change the string
     `"test"` to `"???"`?
 
-
+   
 
 ### 4.2. Cloning from `git` and modifying C programs
 
@@ -559,10 +561,12 @@ a.  What is the difference between the C literal values `3`, `'3'`,
     $ ./test_leap foo bar
     ```
 
-    What results do you get? Take a look at the code in `test_leap.c`
+    What results do you get? Take a look at the code in `test_leap.c`,
+    read the documentation for the `strtol` function (by running
+    `man strtol`),
     and explain what is happening in each case.
 
-
+   
 
 4.  Create a repository on GitHub that will hold your own version of
     this code. Visit <https://github.com>, click on the plus ("+")
@@ -611,7 +615,7 @@ a.  What is the difference between the C literal values `3`, `'3'`,
     Compare your changes with another student's – are there any
     differences between how you fixed the program?
 
-
+    
 
 
 
