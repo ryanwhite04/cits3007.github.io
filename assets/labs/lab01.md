@@ -577,16 +577,33 @@ a.  What is the difference between the C literal values `3`, `'3'`,
 
     Then click "Create repository".
 
-5.  In your Linux terminal, type
+5.  You'll need to create an SSH id, for use with GitHub.
+
+    Type `ssh-keygen` in the VM, and hit "`enter`" in response to any
+    questions.
+
+    Type `cat ~/.ssh/id_rsa.pub` in the VM -- a long line starting with
+    "`ssh-rsa`" should be displayed.
+
+    Go to "GitHub settings" (top right of the GitHub page, and select
+    "Settings" from the drop-donw menu), then "SSH and GPG keys",
+    and click "new SSH key".
+
+    Give your SSH key a name (e.g. "cits3007 ssh key"), then paste the
+    output of the `cat` command into the box marked `key`, and click
+    "Add SSH key".
+
+6.  In your Linux terminal, type
 
     ```
     $ git remote remove origin
-    $ git remote add origin https://github.com/mygithubaccount/cits3007-test-repo.git
+    $ git remote add origin git@github.com:mygithubaccount/cits3007-test-repo.git
     $ git push -u origin master
     ```
 
     replacing "`cits3007-test-repo`" with the name of the repository you
-    created in step 4, and `mygithubaccount` with your GitHub username.
+    created in step 4, and `mygithubaccount` with your GitHub
+    username.
 
     When you originally cloned the repository, you created a local
     repository (contained in the VM) which was "linked" to the remote
@@ -597,6 +614,21 @@ a.  What is the difference between the C literal values `3`, `'3'`,
     <https://github.com/cits3007/lab01-leap-year> (since you don't have
     permission to write to that repository), and replace it with a link
     to the new repository you *can* write to.
+
+    The SSH key you've created consists of two parts -- a *public* part,
+    located in `~/.ssh/id_rsa.pub` on the VM, which you can freely share with
+    anyone, and a *private* part (located in `~/.ssh/id_rsa` on the VM), which you
+    should keep secret. You will probably want to store these for later
+    use. Running
+
+    ```
+    $ vagrant ssh -- cat ~/.ssh/id_rsa.pub > id_rsa.pub
+    $ vagrant ssh -- cat ~/.ssh/id_rsa > id_rsa
+    ```
+
+    will copy the files to your host machine so you can use them later.
+    (Type `vagrant upload --help` for information on how you can upload
+    them to another VM.)
 
 6.  The code in `test_leap.c` contains an error. The correct algorithm
     for determining whether a year is a leap year is outlined at
