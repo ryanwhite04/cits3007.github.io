@@ -31,9 +31,8 @@ For most purposes, either of these options will be fine; we will let you
 know for particular labs if anything more is needed.
 
 VirtualBox is not available for ARM64-based Macs (i.e. the "M1" series
-Macs). If you use such a Mac, then you should either use the GitPod
-web-based environment, or you can try installing [UTM][utm]
-(see instructions later in this lab under [Using UTM](#using-utm)).
+Macs). If you use such a Mac, then you should use the GitPod
+web-based environment.
 
 [utm]: https://mac.getutm.app
 
@@ -271,10 +270,22 @@ open, which contains code downloaded from
 create and open new folders if desired.
 
 
-### Using UTM { #using-utm }
+### Using UTM **[DEPRECATED]** { #using-utm }
 
 If you have an ARM64-based Mac, then no version of VirtualBox currently
 exists which can run on your computer.
+
+<div style="border: solid 2pt red; background-color: hsla(0, 100%, 80%, 1); padding: 1em;">
+
+Unfortunately, the UTM interface seems to have changed in the week
+since the lab was written, and the UTM site does not provide
+updated documentation.
+
+You are welcome to experiment with UTM if you wish, but we can't provide
+any assistance or support, and recommend you
+[use the web-based GitPod](#using-gitpod) interface for labs.
+
+</div>
 
 You might like to experiment with [UTM][utm], which lets you
 create and run virtual machines on M1 series Macs. However, our teaching
@@ -368,14 +379,14 @@ a.  How would you describe the relationship between threats,
     vulnerabilities, and attacks? Give examples to illustrate the
     relationship.
 
-    
+
 
 
 
 #.  Is it possible for a *threat* and a *vulnerability* to both exist,
     without there being an attack? Explain why or why not.
 
-    
+
 
 #.  Consider an ATM, which requires users to provide a bank card and a
     PIN in order to perform transactions. Give examples of
@@ -384,7 +395,7 @@ a.  How would you describe the relationship between threats,
     requirement is -- are they all equally important, or does the
     importance differ?
 
-    
+
 
 ## 3. AusCERT security bulletins
 
@@ -427,14 +438,14 @@ a.  The bulletin is for a patch which fixes a *vulnerability*.
     What is the vulnerability (give a CVE identifier and a description)?
     In what product does it occur?
 
-    
+
 
 #.  How severe is the vulnerability? If a vulnerability is severe, does
     that necessarily mean it is easy to exploit, and/or has a high
     probability of being exploited?
 
 
-    
+
 
 
 Locate the CVE information page on <https://www.cve.org> for
@@ -446,13 +457,13 @@ Answer the following questions:
 c.  How could an attacker exploit this vulnerability? Describe
     a scenario in which this could occur.
 
-    
+
 
 
 #.  Of the "C I A" security goals -- which ones could be compromised
     if this vulnerability were exploited?
 
-    
+
 
 
 
@@ -481,7 +492,7 @@ following websites useful:
 a.  What is the difference between the C literal values `3`, `'3'`,
     `"3"` and `3.0`? What is the type of each?
 
-    
+
 
 
 
@@ -505,18 +516,18 @@ a.  What is the difference between the C literal values `3`, `'3'`,
     If this code is executed, what will be printed to the terminal?
 
 
-    
+
 
 #.  What is the output of the question (b) code if we change the string
     `"test"` to `"TEST"`?
 
 
-    
+
 
 #.  What is the output of the question (b) code if we change the string
     `"test"` to `"???"`?
 
-   
+
 
 ### 4.2. Cloning from `git` and modifying C programs
 
@@ -566,7 +577,7 @@ a.  What is the difference between the C literal values `3`, `'3'`,
     `man strtol`),
     and explain what is happening in each case.
 
-   
+
 
 4.  Create a repository on GitHub that will hold your own version of
     this code. Visit <https://github.com>, click on the plus ("+")
@@ -647,7 +658,7 @@ a.  What is the difference between the C literal values `3`, `'3'`,
     Compare your changes with another student's – are there any
     differences between how you fixed the program?
 
-    
+
 
 
 
