@@ -639,7 +639,26 @@ commands to tell <code>git</code> who you are</p>
 <pre><code>$ git config --global user.name &#39;John Smith&#39;
 $ git config --global user.email &#39;mygithubaccount@users.noreply.github.com&#39;</code></pre>
 <p>replacing “John Smith” with your own name, and
-<code>mygithubaccount</code> with your GitHub username.</p></li>
+<code>mygithubaccount</code> with your GitHub username.</p>
+<div style="border: solid 2pt orange; background-color: hsl(22.35, 100%, 85%, 1); padding: 1em;">
+<p><strong>Networking issues?</strong></p>
+<p>If <code>git clone</code> fails due to network connectivity issues,
+here are a couple of quick fixes to try:</p>
+<ul>
+<li><p>In the VM, run the command</p>
+<pre><code>$ echo nameserver 8.8.8.8 | sudo cat -a /etc/resolv.conf</code></pre>
+<p>This can fix issues with DNS (“Name or service not known”), as it
+points the VM to a Google-maintained DNS server at IP address
+8.8.8.8.</p></li>
+<li><p>For the moment, try using a different VM image – in a fresh
+directory, try <code>vagrant init bento/ubuntu-20.04</code> and repeat
+the steps for bringing a VM up.</p>
+<p>Within the VM, you’ll want to run
+<code>sudo apt install build-essential</code> to ensure <code>gcc</code>
+and <code>make</code> are installed. This image will be OK to use for
+the next few labs, til we can diagnose the problem.</p></li>
+</ul>
+</div></li>
 <li><p>Build the <code>test_leap</code> program by typing
 <code>make</code>, then try running it with various different
 command-line arguments:</p>

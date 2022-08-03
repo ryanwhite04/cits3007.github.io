@@ -557,6 +557,30 @@ a.  What is the difference between the C literal values `3`, `'3'`,
     replacing "John Smith" with your own name, and `mygithubaccount` with your
     GitHub username.
 
+    <div style="border: solid 2pt orange; background-color: hsl(22.35, 100%, 85%, 1); padding: 1em;">
+
+    **Networking issues?**
+
+    If `git clone` fails due to network connectivity issues, here are a couple of quick fixes to try:
+
+    - In the VM, run the command
+
+      ```
+      $ echo nameserver 8.8.8.8 | sudo cat -a /etc/resolv.conf
+      ```
+
+      This can fix issues with DNS ("Name or service not known"), as it points the VM
+      to a Google-maintained DNS server at IP address 8.8.8.8.
+
+    - For the moment, try using a different VM image -- in a fresh directory, try `vagrant init bento/ubuntu-20.04`
+      and repeat the steps for bringing a VM up.
+
+      Within the VM, you'll want to run `sudo apt install build-essential` to ensure `gcc` and `make` are
+      installed. This image will be OK to use for the next few labs, til we can diagnose the problem.
+
+
+    </div>
+
 3.  Build the `test_leap` program by typing `make`, then try running it
     with various different command-line arguments:
 
