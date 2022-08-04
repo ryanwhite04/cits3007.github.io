@@ -41,10 +41,9 @@ progresses.
 
 - Week 1
   - Lecture 1 -- introduction {% resourceList "lect01--intro", ["pdf", "md"] %}
-{#
-  - Lecture 2 -- testing concepts {% resourceList "lect02--testing", ["pdf", "md"] %}
 - Week 2
-  - Lecture 3 -- test automation {% resourceList "lect03--autom", ["pdf", "md"] %}
+  - Lecture 2 -- introduction {% resourceList "lect02--memory", ["pdf", "md"] %}
+{#
 - Week 3
   (continuing slides from week 2)
 - Week 4
