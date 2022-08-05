@@ -566,7 +566,7 @@ a.  What is the difference between the C literal values `3`, `'3'`,
     - In the VM, run the command
 
       ```
-      $ echo nameserver 8.8.8.8 | sudo cat -a /etc/resolv.conf
+      $ echo nameserver 8.8.8.8 | sudo tee -a /etc/resolv.conf
       ```
 
       This can fix issues with DNS ("Name or service not known"), as it points the VM

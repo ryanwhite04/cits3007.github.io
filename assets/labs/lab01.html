@@ -646,7 +646,7 @@ $ git config --global user.email &#39;mygithubaccount@users.noreply.github.com&#
 here are a couple of quick fixes to try:</p>
 <ul>
 <li><p>In the VM, run the command</p>
-<pre><code>$ echo nameserver 8.8.8.8 | sudo cat -a /etc/resolv.conf</code></pre>
+<pre><code>$ echo nameserver 8.8.8.8 | sudo tee -a /etc/resolv.conf</code></pre>
 <p>This can fix issues with DNS (“Name or service not known”), as it
 points the VM to a Google-maintained DNS server at IP address
 8.8.8.8.</p></li>
