@@ -96,6 +96,9 @@ available in week 2.
 
 - Week 2 -- intro
   - Lab worksheet {% resourceList "lab01", ["html", "md"] %}
+  - Sample worksheet solutions {% resourceList "lab01-solutions", ["html", "md"] %}
+- Week 3 -- debugging
+  - Lab worksheet {% resourceList "lab02", ["html", "md"] %}
 {#
   - Source code ([zip]({{ "/workshops/workshop-01-code.zip" | url }}))
   - Sample worksheet solutions {% resourceList "workshop01-solutions", ["pdf", "md"] %}
