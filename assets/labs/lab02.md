@@ -172,7 +172,7 @@ GDB "cheat sheets" are available [here][gdb-cheat] (PDF)
 and
 [here][gdb-cheat-2].
 
-[hitch-gdb]: https://apoorvaj.io/hitchhikers-guide-to-the-gd
+[hitch-gdb]: https://apoorvaj.io/hitchhikers-guide-to-the-gdb
 [gdb-tutorial]: https://developers.redhat.com/blog/2021/04/30/the-gdb-developers-gnu-debugger-tutorial-part-1-getting-started-with-the-debugger
 [gdb-tutorial-2]: https://developers.redhat.com/articles/2022/01/10/gdb-developers-gnu-debugger-tutorial-part-2-all-about-debuginfo
 [gdb-cheat]: https://darkdust.net/files/GDB Cheat Sheet.pdf
