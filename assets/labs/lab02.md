@@ -26,10 +26,10 @@ source code we provided, making the behaviour of `gdb` unexpected.
 [optim-options]: https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html
 
 The Makefile for this lab already includes these two flags, so
-running `make build factorial` in your VM is all you need to do to
+running `make factorial` in your VM is all you need to do to
 compile the code. (All commands from this point on in the lab are
-intended to be run from the command-line in your VM, unless otherwise
-specified.)
+intended to be run from the command-line in your VM, in the cloned
+`lab02` directory, unless otherwise specified.)
 
 
 ### 1.1. Factorial results
@@ -162,7 +162,7 @@ commands:
 - `clear`: remove all breakpoints.
 
 - `backtrace` (`bt` for short): print information on the stack frames
-  currently on the call stack -- i.e., what functions called the
+  currently on the call stack -- i.e., what "chain" of functions called the
   function you're currently in, and with what arguments.
 
 For some additional commands and advanced features, see
@@ -198,7 +198,8 @@ Step through the program, examining the values of `argc`, `argv`,
 and elements of `argv` (like `argv[0]` and `argv[1]`) at various points
 in the program.
 
-What is the effect of the two statements we listed above?
+What is the effect of the two statements we listed above? Why would we
+use them?
 
 
 
@@ -211,10 +212,14 @@ cast the `long` into an `int`.
 
 However, C11 has a function `atoi`, which converts strings to `int`s, so
 it seems we could have used that.
-Read the documentation for `strtol` (`man strtol` in your VM, or
-<https://en.cppreference.com/w/c/string/byte/strtol>) and `atoi`
-(`man atoi` in your VM, or
-<https://en.cppreference.com/w/c/string/byte/atoi>) and summarize
+Read the documentation for 
+
+- `strtol` (`man strtol` in your VM, or
+<https://en.cppreference.com/w/c/string/byte/strtol>), and
+- `atoi` (`man atoi` in your VM, or
+<https://en.cppreference.com/w/c/string/byte/atoi>)
+
+and summarize
 what the differences are. Why might we prefer `strtol` over `atoi`?
 
 
@@ -239,7 +244,8 @@ how to do this, and make a note of it for next time.
 
 
 
-<div style="border: solid 2pt blue; background-color: hsla(241, 100%, 50%, 0.1); padding: 1em; border-radius: 5pt;">
+<div style="border: solid 2pt blue; background-color: hsla(241, 100%,
+50%, 0.1); padding: 1em; border-radius: 5pt; margin-top: 1em;">
 
 **Recommendation -- keep lab notes**
 
@@ -251,7 +257,7 @@ Docs](https://docs.google.com/), but another option is to store
 your notes in a "Gist" -- a single text file versioned by GitHub.
 
 Click on the "+" symbol in the top right of any GitHub page, and select
-"New gist". Give your girst a description (e.g. "My CITS3007 notes")
+"New gist". Give your gist a description (e.g. "My CITS3007 notes")
 and a filename (e.g. "notes.md"). Then click "Create secret gist"
 (or "public", if you wish to make it public).
 
@@ -271,7 +277,8 @@ Compile the `segfault` program by running `make segfault` and then run
 it with `./segfault`. The intended behaviour is that it should accept a
 line of input from the user, and echo this back.
 
-However, when run, it produces a [*segmentation fault*][segfault]. A
+However, when it is run and some text entered, it produces a
+[*segmentation fault*][segfault]. A
 segmentation fault is caused when the CPU detects that a program has
 attempted to access memory which it is not permitted to access.
 

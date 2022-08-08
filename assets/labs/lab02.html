@@ -277,10 +277,10 @@ our code, then the CPU instructions being executed may not correspond
 very closely to the source code we provided, making the behaviour of
 <code>gdb</code> unexpected.</p>
 <p>The Makefile for this lab already includes these two flags, so
-running <code>make build factorial</code> in your VM is all you need to
-do to compile the code. (All commands from this point on in the lab are
-intended to be run from the command-line in your VM, unless otherwise
-specified.)</p>
+running <code>make factorial</code> in your VM is all you need to do to
+compile the code. (All commands from this point on in the lab are
+intended to be run from the command-line in your VM, in the cloned
+<code>lab02</code> directory, unless otherwise specified.)</p>
 <h3 id="factorial-results">1.1. Factorial results</h3>
 <p>Read the API comments for the <code>factorial</code> function in
 <code>factorial.c</code>, and build the <code>factorial</code> program
@@ -386,8 +386,8 @@ function or block you’re in.</p></li>
 <li><p><code>clear</code>: remove all breakpoints.</p></li>
 <li><p><code>backtrace</code> (<code>bt</code> for short): print
 information on the stack frames currently on the call stack – i.e., what
-functions called the function you’re currently in, and with what
-arguments.</p></li>
+“chain” of functions called the function you’re currently in, and with
+what arguments.</p></li>
 </ul>
 <p>For some additional commands and advanced features, see the <a href="https://apoorvaj.io/hitchhikers-guide-to-the-gd">Hitchikers Guide
 To The GDB</a> and the GDB tutorial series <a href="https://developers.redhat.com/blog/2021/04/30/the-gdb-developers-gnu-debugger-tutorial-part-1-getting-started-with-the-debugger">here</a>
@@ -409,7 +409,8 @@ and come back in.)</p>
 <code>argv</code>, and elements of <code>argv</code> (like
 <code>argv[0]</code> and <code>argv[1]</code>) at various points in the
 program.</p>
-<p>What is the effect of the two statements we listed above?</p>
+<p>What is the effect of the two statements we listed above? Why would
+we use them?</p>
 <h3 id="strtol">1.4. <code>strtol</code></h3>
 <p>In the file <code>factorial.c</code>, we use the function
 <code>strtol</code> to convert the program’s first command-line argument
@@ -418,10 +419,13 @@ into a <code>long</code>, despite the fact that the
 then cast the <code>long</code> into an <code>int</code>.</p>
 <p>However, C11 has a function <code>atoi</code>, which converts strings
 to <code>int</code>s, so it seems we could have used that. Read the
-documentation for <code>strtol</code> (<code>man strtol</code> in your
-VM, or <a href="https://en.cppreference.com/w/c/string/byte/strtol" class="uri">https://en.cppreference.com/w/c/string/byte/strtol</a>) and
-<code>atoi</code> (<code>man atoi</code> in your VM, or <a href="https://en.cppreference.com/w/c/string/byte/atoi" class="uri">https://en.cppreference.com/w/c/string/byte/atoi</a>) and
-summarize what the differences are. Why might we prefer
+documentation for</p>
+<ul>
+<li><code>strtol</code> (<code>man strtol</code> in your VM, or <a href="https://en.cppreference.com/w/c/string/byte/strtol" class="uri">https://en.cppreference.com/w/c/string/byte/strtol</a>),
+and</li>
+<li><code>atoi</code> (<code>man atoi</code> in your VM, or <a href="https://en.cppreference.com/w/c/string/byte/atoi" class="uri">https://en.cppreference.com/w/c/string/byte/atoi</a>)</li>
+</ul>
+<p>and summarize what the differences are. Why might we prefer
 <code>strtol</code> over <code>atoi</code>?</p>
 <h3 id="diagnosing-and-fixing-the-factorial-bug">1.5. Diagnosing and
 fixing the <code>factorial</code> bug</h3>
@@ -439,7 +443,8 @@ and use <code>git remote remove</code>, <code>git remote add</code> and
 <p>Refer to <a href="https://cits3007.github.io/labs/lab01.html">Lab
 1</a> if you can’t recall how to do this, and make a note of it for next
 time.</p>
-<div style="border: solid 2pt blue; background-color: hsla(241, 100%, 50%, 0.1); padding: 1em; border-radius: 5pt;">
+<div style="border: solid 2pt blue; background-color: hsla(241, 100%,
+50%, 0.1); padding: 1em; border-radius: 5pt; margin-top: 1em;">
 <p><strong>Recommendation – keep lab notes</strong></p>
 <p>It’s recommended you keep online notes of useful commands you come
 across in the unit and/or useful links, as a reminder to yourself of
@@ -448,7 +453,7 @@ using <a href="https://docs.google.com/">Google Docs</a>, but another
 option is to store your notes in a “Gist” – a single text file versioned
 by GitHub.</p>
 <p>Click on the “+” symbol in the top right of any GitHub page, and
-select “New gist”. Give your girst a description (e.g. “My CITS3007
+select “New gist”. Give your gist a description (e.g. “My CITS3007
 notes”) and a filename (e.g. “notes.md”). Then click “Create secret
 gist” (or “public”, if you wish to make it public).</p>
 <p>Gists support formatting your file using <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Markdown</a>
@@ -462,7 +467,7 @@ tab will show you what your notes look like converted to HTML.</p>
 <code>make segfault</code> and then run it with <code>./segfault</code>.
 The intended behaviour is that it should accept a line of input from the
 user, and echo this back.</p>
-<p>However, when run, it produces a <a href="https://en.wikipedia.org/wiki/Segmentation_fault"><em>segmentation
+<p>However, when it is run and some text entered, it produces a <a href="https://en.wikipedia.org/wiki/Segmentation_fault"><em>segmentation
 fault</em></a>. A segmentation fault is caused when the CPU detects that
 a program has attempted to access memory which it is not permitted to
 access.</p>
